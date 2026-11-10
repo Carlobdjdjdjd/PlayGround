@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lumberjack Tycoon</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar panel">
+        <div>
+          <p class="eyebrow">Forest frontier</p>
+          <h1>Lumberjack Tycoon</h1>
+        </div>
+        <div class="header-stats">
+          <div class="mini-stat">
+            <span>Cash</span>
+            <strong id="cashValue">$20</strong>
+          </div>
+          <div class="mini-stat">
+            <span>Trees cut</span>
+            <strong id="treesCutValue">0</strong>
+          </div>
+          <div class="mini-stat">
+            <span>Goal</span>
+            <strong id="goalValue">1000</strong>
+          </div>
+        </div>
+      </header>
+
+      <main class="game-layout">
+        <aside class="panel sidebar left">
+          <h2>Progress</h2>
+          <div class="stat-grid">
+            <div class="stat-card">
+              <span>Tool</span>
+              <strong id="toolName">Rusty Axe</strong>
+            </div>
+            <div class="stat-card">
+              <span>Power</span>
+              <strong id="attackPowerValue">1</strong>
+            </div>
+            <div class="stat-card">
+              <span>Auto income</span>
+              <strong id="autoIncomeValue">$0/s</strong>
+            </div>
+            <div class="stat-card">
+              <span>Forest level</span>
+              <strong id="forestLevelValue">1</strong>
+            </div>
+          </div>
+
+          <div class="objective-box">
+            <p class="label">Objective</p>
+            <p class="objective-text">Cut down over 1000 trees to become the top lumber baron.</p>
+            <div class="progress-bar">
+              <div id="goalProgress" class="progress-fill"></div>
+            </div>
+            <p id="goalProgressLabel">0/1000 trees cleared</p>
+          </div>
+
+          <div class="message-box" id="messageBox">Your crunching empire begins with a rusty axe.</div>
+        </aside>
+
+        <section class="forest-panel panel">
+          <div class="forest-header">
+            <h2>Forest</h2>
+            <button id="nextForestBtn" class="secondary-btn">Regrow forest</button>
+          </div>
+          <div id="forest" aria-label="Forest area"></div>
+        </section>
+
+        <aside class="panel sidebar right">
+          <h2>Shop</h2>
+          <div class="shop-list" id="shopList"></div>
+        </aside>
+      </main>
+    </div>
+
+    <script src="game.js"></script>
+  </body>
+</html>
